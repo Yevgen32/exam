@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>module</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function getTime(n) {
+	var m = Math.floor(n / 60);
+	var s = n % 60;
+	var h = Math.floor(m / 60);
+	m = m % 60;
+	var time = "";
+	if(h >= 10 ){
+		time += h+":"; 
+	}else if( h == 0){
+		time += "00"+":";
+	}
+	else{
+		time += "0" + h+":";
+	}
+	if(m >= 10 ){
+		time += m+":"; 
+	}else if( m == 0){
+		time += "00"+":";
+	}
+	else{
+		time += "0" + m+":";
+	}
+	if(s >= 10 ){
+		time += s; 
+	}else if( s == 0){
+		time += "00";
+	}
+	else{
+		time += "0" + s;
+	}
+	alert(time);
+}
+getTime(3620);
+getTime(66);
+getTime(520)
+</script>
+</html>
